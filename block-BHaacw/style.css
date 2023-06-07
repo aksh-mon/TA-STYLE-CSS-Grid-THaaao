@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body {
+  background-color: gray;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "sidebar-l  main sidebar-r" "sidebar-l2 main sidebar-r2" "sidebar-l2 main sidebar-r3";
+}
+
+.header {
+  grid-area: header;
+  background-color: white;
+  border: 4px solid;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border-top-color: blueviolet;
+  padding: 1rem;
+}
+.header nav {
+  display: inline-flex;
+}
+.header a {
+  color: blueviolet;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+  position: relative;
+}
+.main h2 {
+  margin: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.main p {
+  margin: 1.5rem 0.5rem;
+}
+.main a {
+  margin: 0.5rem 0.5rem;
+}
+
+.sidebar-l {
+  grid-area: sidebar-l;
+  background-color: white;
+}
+.sidebar-l h2 {
+  margin: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.sidebar-l p {
+  margin: 1.5rem 0.5rem;
+}
+.sidebar-l a {
+  margin: 0.5rem 0.5rem;
+}
+
+.sidebar-l2 {
+  grid-area: sidebar-l2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-l2 h2 {
+  margin: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.sidebar-l2 p {
+  margin: 0.5rem 0.5rem;
+}
+.sidebar-l2 a {
+  margin: 0.5rem 0.5rem;
+}
+
+.sidebar-r {
+  grid-area: sidebar-r;
+  background-color: white;
+}
+.sidebar-r h2 {
+  margin: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.sidebar-r p {
+  margin: 0.5rem 0.5rem;
+}
+.sidebar-r a {
+  display: block;
+  background-color: red;
+  padding: 1rem;
+  text-transform: capitalize;
+  color: white;
+}
+
+.sidebar-r2 {
+  grid-area: sidebar-r2;
+  background-color: white;
+}
+.sidebar-r2 h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: block;
+  background-color: blueviolet;
+  color: white;
+  padding: 1rem;
+}
+.sidebar-r2 p {
+  margin: 0.5rem 0.5rem;
+}
+.sidebar-r2 a {
+  margin: 0.5rem 0.5rem;
+}
+
+.sidebar-r3 {
+  grid-area: sidebar-r3;
+  background-color: white;
+}
+.sidebar-r3 h2 {
+  margin: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.sidebar-r3 p {
+  margin: 1.5rem 0.5rem;
+}
+.sidebar-r3 a {
+  margin: 0.5rem 0.5rem;
+}
+
+.cat {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid chartreuse;
+  position: relative;
+  left: 4rem;
+}
+
+.bar {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 5rem;
+}
+
+.border {
+  border: 4px solid;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border-top-color: blueviolet;
+}
+
+.red-a {
+  text-transform: capitalize;
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas: "header header header" "sidebar-l sidebar-r sidebar-r" "sidebar-l2 sidebar-r2 sidebar-r2" "sidebar-l2 sidebar-r3 sidebar-r3" "main . .";
+  }
+  .sidebar-l {
+    grid-area: sidebar-l;
+  }
+  .sidebar-r {
+    grid-area: sidebar-r;
+  }
+  .sidebar-l2 {
+    grid-area: sidebar-l2;
+  }
+  .main {
+    grid-area: main;
+  }
+  .sidebar-r2 {
+    grid-area: sidebar-r2;
+  }
+  .sidebar-r3 {
+    grid-area: sidebar-r3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas: "header header header" "sidebar-l sidebar-r sidebar-r" "sidebar-l2 sidebar-r2 sidebar-r2" "sidebar-l2 sidebar-r3 sidebar-r3" "main . .";
+  }
+  .sidebar-l {
+    grid-area: sidebar-l;
+  }
+  .sidebar-r {
+    grid-area: sidebar-r;
+  }
+  .sidebar-l2 {
+    grid-area: sidebar-l2;
+  }
+  .main {
+    grid-area: main;
+  }
+  .sidebar-r2 {
+    grid-area: sidebar-r2;
+  }
+  .sidebar-r3 {
+    grid-area: sidebar-r3;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-areas: "header header header" "sidebar-l sidebar-l sidebar-l " "sidebar-l2 sidebar-l2 sidebar-l2" "main main main" "sidebar-r sidebar-r sidebar-r" "sidebar-r2 sidebar-r2 sidebar-r2" "sidebar-r3 sidebar-r3 sidebar-r3";
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
